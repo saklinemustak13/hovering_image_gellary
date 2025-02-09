@@ -1,0 +1,84 @@
+/* Basic reset for the whole page */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #000a1f;  /* Dark blue background */
+    font-family: Arial, sans-serif;
+    color: white;
+    
+    /* Center everything on the page */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Main wrapper for all content */
+.gallery-wrapper {
+    width: 90%;
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* Header section styling */
+h1 {
+    color: #8a2be2;  /* Purple color */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Text styling */
+p {
+    color: #a9a9a9;  /* Light gray */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Purple italic text for the tip */
+.gallery-tip {
+    color: #8a2be2;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* Image container */
+.container {
+    height: 450px;
+    margin: 20px auto;
+    
+    /* Arrange images in a row */
+    display: flex;
+    justify-content: center;
+    gap: 10px;  /* Space between images */
+}
+
+/* Image styling */
+.container img {
+    width: 10%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: all 0.33s linear;  /* Smooth animation */
+}
+
+/* Image hover effect */
+.container img:hover {
+    width: 25%;
+    border-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Mobile responsive design */
+@media (max-width: 768px) {
+    /* Adjust sizes for smaller screens */
+    h1 { font-size: 2rem; }
+    .container { 
+        height: 350px;
+        width: 90%;
+    }
+    .container img { width: 15%; }
+    .container img:hover { width: 40%; }
+}
